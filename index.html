@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Sección principal -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a iPhone Store</h1>
+            <p>Descubre los mejores modelos de iPhone, innovadores, rápidos y poderosos.</p>
+            <a href="#productos" class="btn-main">Explora los productos</a>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="product-cards">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="img/iphone-13-1.jpg" alt="iPhone 13" class="product-image active">
+                    <img src="img/iphone-13-2.jpg" alt="iPhone 13 - Vista 2" class="product-image">
+                    <img src="img/iphone-13-3.jpg" alt="iPhone 13 - Vista 3" class="product-image">
+                    <!-- Flechas dentro del contenedor de imágenes -->
+                    <button class="prev" onclick="moveSlide(0, -1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(0, 1)">&#10095;</button>
+                </div>
+                <h3>iPhone 13</h3>
+                <p>El iPhone 13 tiene todo lo que te gusta. Cámara avanzada, pantalla Super Retina y mucho más.</p>
+                <a href="#" class="btn-product">Ver más</a>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="img/iphone-14-1.jpg" alt="iPhone 14" class="product-image active">
+                    <img src="img/iphone-14-2.jpg" alt="iPhone 14 - Vista 2" class="product-image">
+                    <img src="img/iphone-14-3.jpg" alt="iPhone 14 - Vista 3" class="product-image">
+                    <!-- Flechas dentro del contenedor de imágenes -->
+                    <button class="prev" onclick="moveSlide(1, -1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1, 1)">&#10095;</button>
+                </div>
+                <h3>iPhone 14</h3>
+                <p>Un iPhone increíble, ahora con la potencia de un chip A15 Bionic y una cámara profesional.</p>
+                <a href="#" class="btn-product">Ver más</a>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="img/iphone-15-1.jpg" alt="iPhone 15" class="product-image active">
+                    <img src="img/iphone-15-2.jpg" alt="iPhone 15 - Vista 2" class="product-image">
+                    <img src="img/iphone-15-3.jpg" alt="iPhone 15 - Vista 3" class="product-image">
+                    <!-- Flechas dentro del contenedor de imágenes -->
+                    <button class="prev" onclick="moveSlide(2, -1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(2, 1)">&#10095;</button>
+                </div>
+                <h3>iPhone 15</h3>
+                <p>La próxima evolución de iPhone, con tecnología avanzada, un diseño espectacular y más.</p>
+                <a href="#" class="btn-product">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de productos recomendados -->
+    <section id="productos-recomendados" class="productos recomendados">
+        <h2>Productos Recomendados</h2>
+        <div class="product-cards">
+            <!-- Producto recomendado 1 -->
+            <div class="product-card">
+                <img src="img/iphone-13-mini.jpg" alt="iPhone 13 Mini" class="product-image">
+                <h3>iPhone 13 Mini</h3>
+                <p>Pequeño en tamaño, grande en rendimiento. La potencia del iPhone 13 en una versión compacta.</p>
+                <a href="#" class="btn-product">Ver más</a>
+            </div>
+
+            <!-- Producto recomendado 2 -->
+            <div class="product-card">
+                <img src="img/iphone-se.jpg" alt="iPhone SE" class="product-image">
+                <h3>iPhone SE</h3>
+                <p>La esencia de Apple con la potencia de un chip A13. ¡Un teléfono inteligente a un precio accesible!</p>
+                <a href="#" class="btn-product">Ver más</a>
+            </div>
+
+            <!-- Producto recomendado 3 -->
+            <div class="product-card">
+                <img src="img/iphone-12.jpg" alt="iPhone 12" class="product-image">
+                <h3>iPhone 12</h3>
+                <p>Diseño elegante, cámara avanzada y rendimiento mejorado. La opción perfecta para todos.</p>
+                <a href="#" class="btn-product">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de comentarios -->
+    <section id="comentarios" class="comentarios">
+        <h2>Deja tu Comentario</h2>
+        <form id="comentarioForm">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <textarea id="comentario" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit" class="btn-product">Enviar Comentario</button>
+        </form>
+        <div id="comentariosList">
+            <!-- Aquí se mostrarán los comentarios -->
+        </div>
+    </section>
+
+    <!-- Sección final -->
+    <footer class="footer">
+        <p>&copy; 2024 iPhone Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
